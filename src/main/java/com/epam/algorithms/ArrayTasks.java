@@ -90,8 +90,22 @@ public class ArrayTasks {
      * <p>
      * arr = [1,-2, 3]      -> [1, 3] arr = [-1, -2, -3]   -> [] arr = [1, 2]         -> [1, 2]
      */
-    public int[] getOnlyPositiveNumbers(int[] arr) {
-        return null;
+     public int[] getOnlyPositiveNumbers(int[] arr) {
+        int pos_nums = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] > 0){
+                pos_nums++;
+            }
+        }
+        int[] a = new int[pos_nums];
+        int j = 0;
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] > 0){
+                a[j] = arr[i];
+                j++;
+            }
+        }
+        return a;
     }
 
     /**
